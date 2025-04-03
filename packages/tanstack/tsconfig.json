@@ -1,0 +1,11 @@
+{
+    "extends": "../../developer/tsconfig/tsconfig.json",
+    "compilerOptions": {
+        "skipLibCheck": true,
+        "baseUrl": ".",
+        "paths": {
+            "@/*": ["./lib/*"]
+        }
+    },
+    "include": ["./**/*", "./utils", "vite.config.mts"]
+}

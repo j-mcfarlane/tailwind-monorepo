@@ -1,0 +1,37 @@
+{
+    "name": "@base/typography",
+    "main": "./dist/typography.umd.js",
+    "module": "./dist/typography.es.js",
+    "types": "./dist/index.d.ts",
+    "unpkg": "./dist/typography.umd.js",
+    "exports": {
+        ".": {
+            "main": "./dist/typography.umd.js",
+            "module": "./dist/typography.es.js",
+            "types": "./dist/index.d.ts"
+        }
+    },
+    "scripts": {
+        "build": "PACKAGE_NAME=typography vite build",
+        "lint": "eslint ./src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+        "clean": "rm -rf node_modules",
+        "test": "vitest",
+        "test:w": "vitest --watch",
+        "test:coverage": "vitest --coverage"
+    },
+    "peerDependencies": {
+        "@base/styling": "workspace:*",
+        "@base/utils": "workspace:*",
+        "@radix-ui/react-slot": "^1",
+        "@tailwindcss/cli": "^4",
+        "class-variance-authority": "^0.7",
+        "clsx": "^2.1.1",
+        "react": "^19",
+        "react-dom": "^19",
+        "tailwind-animate": "^0.2",
+        "tailwind-merge": "^3"
+    },
+    "dependencies": {
+        "tailwind-variants": "^1.0.0"
+    }
+}
